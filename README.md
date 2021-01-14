@@ -1,28 +1,26 @@
-# THM---Ignite-Writeup
+# THM Ignite-Writeup
 
-This is a write up for the ROOM Ignite on THM.
+This is a write up for the room Ignite on THM.
 
-First i scan the machine with nmap and while nmap is running i will go check manually for somehints on the webpage.
+First i start my scans with nmap and gobuster, while these are running i go and explore the page manually.
+Already on the frontpage we are greeted with the version of the CMS 
 ![CMS VERSION 1.4](https://i.imgur.com/FovmUTc.png)
-
+And some admin credentials, ets try them out!
 ![Imgur](https://i.imgur.com/OzfJMPd.png)
-We successfully logged in with the credentials ! 
-Lets try to find a way to upload a reverseshell! 
+We successfully loggedin with the credentials ! 
+This was easy lets try to find a way to upload a reverseshell! 
 ![Imgur](https://i.imgur.com/oGBUi1z.png)
-
-Doesnt work..
-
+After some attempts of trying to by pass some possible filters to upload a reverseshell with out much success i tried to go a different route first.
 Lets go back to the information we had about the CMS version and try to exploit that!
 
-searchsploit is our friend
+Searchsploit is our friend
 ![Imgur](https://i.imgur.com/qC7nxMG.png)
 
-
-we can download it directly with the command
+we can download it directly with the flag -m
 
 searchsploit -m linux/webapps/47138.py
 
-Open it with a editor of your choice and edit the ip and port
+Open it with a editor of your choice and edit the ip and port to the one of your target machine
 ![Imgur](https://i.imgur.com/fTNFAHX.png)
 
 I like to rename it to a more understandable name:
