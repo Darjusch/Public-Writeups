@@ -3,7 +3,7 @@
 This is a write up for the ROOM Ignite on THM.
 
 First i scan the machine with nmap and while nmap is running i will go check manually for somehints on the webpage.
-![CMS VERSION 1.4](https://imgur.com/FovmUTc)
+![CMS VERSION 1.4](https://i.imgur.com/FovmUTc.png)
 
 
 
