@@ -1,9 +1,9 @@
 # THM Ignite-Writeup
 
-This is a write up for the room Ignite on THM.
+This is a write up for the room Ignite on https://tryhackme.com/.
 
-First i start my scans with nmap and gobuster, while these are running i go and explore the page manually.
-Already on the frontpage we are greeted with the version of the CMS 
+First we start our scans with nmap and gobuster, while those are running we go and explore the page manually.
+On the frontpage already we are greeted with the version of the CMS 
 
 ![CMS VERSION 1.4](https://i.imgur.com/FovmUTc.png)
 
@@ -16,22 +16,22 @@ This was easy, lets try to find a way to upload a reverseshell!
 
 ![Imgur](https://i.imgur.com/oGBUi1z.png)
 
-After some attempts of trying to bypass some possible filters to upload a reverseshell with out much success i tried to go a different route first.
-Lets go back to the information we had about the CMS version and try to exploit that!
+After some attempts of trying to bypass some possible filters to upload a reverseshell without much success i tried to go a different route first (Maybe you can manage to bypass those filters, give it a try!).
+I went back to the information we had about the CMS version and tried to exploit that!
 
-Searchsploit is our friend
+In this case searchsploit is our friend
 
 ![Imgur](https://i.imgur.com/qC7nxMG.png)
 
-we can download the exploit we found directly with the flag -m
+We can download the exploit we found directly with the flag -m
 
 searchsploit -m linux/webapps/47138.py
 
-Open it with a editor of your choice and edit the ip and port to the one of your target machine
+Open it with an editor of your choice and edit the ip and the port according to your target machine.
 
 ![Imgur](https://i.imgur.com/fTNFAHX.png)
 
-I also like to rename it to a more understandable name:
+I also like to rename it to a more suitable name:
 
 ![Imgur](https://i.imgur.com/DGDwwtG.png)
 
@@ -43,7 +43,7 @@ We got remote code execution!
 
 Lets improve our persistence! 
 
-We create a nc listener on our host machine
+We create a netcat listener on our host machine
 
 ![Imgur](https://i.imgur.com/0c8XT9R.png)
 
