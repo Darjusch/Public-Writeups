@@ -1,6 +1,6 @@
 # THM Ignite-Writeup
 
-This is a write up for the room Ignite on https://tryhackme.com/.
+This is a write up for the room Ignite from the website https://tryhackme.com/.
 
 First we start our scans with nmap and gobuster, while those are running we go and explore the page manually.
 On the frontpage already we are greeted with the version of the CMS 
