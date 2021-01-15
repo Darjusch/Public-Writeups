@@ -30,8 +30,18 @@ We found a SMB share called pics.
 
 Lets try to loginto that with the smbclient.
 
+You can do that with the command:
+smbclient \\\\targetip\\share -u anonymous
+and no password.
+There are only 2 pictures on the smbshare so we go back and explore the bash script in more detail.
 
-####Gobuster
+It looks like a cronjob, so lets try if we can not only download but also upload files to ftp?
+
+It works! 
+
+So our next step is to hide a reverseshell in the clean.sh script and upload it.
+Now we only need to setup a nc listener and we are in!
+
 
 ## Persistence
 
