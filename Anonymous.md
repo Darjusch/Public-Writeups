@@ -1,8 +1,6 @@
 # This is a Writeup for the Room Anonymous on http://tryhackme.com 
 
-## Enumeration
-
-####Nmap
+### Enumeration
 
 First we use nmap to see which ports are open and which services are running on them.
 
@@ -66,7 +64,7 @@ First lets get a better shell and then escalate our privileges!
 
 We can use python for that: python -c 'import pty; pty.spawn("/bin/bash")'
 
-##Privilege Escalation
+### Privilege Escalation
 
 Lets make our life easier by setting up a http server on my host machine and curl linpeas.sh on the target.
 
