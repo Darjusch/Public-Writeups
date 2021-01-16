@@ -63,7 +63,30 @@ After testing that we can upload files:
 
 [![https://imgur.com/1uxQlRt.png](https://imgur.com/1uxQlRt.png)](https://imgur.com/1uxQlRt.png)
 
-We can know upload a file with a reverseshell.
+We can now create a folder upload our reverseshell and then call the endpoint where the file is stored to activate the reverseshell.
+(Get a reverseshell on https://github.com/pentestmonkey/php-reverse-shell and dont forget to change the ip and port)
+
+[![https://imgur.com/s2NQwJR.png](https://imgur.com/s2NQwJR.png)](https://imgur.com/s2NQwJR.png)
+
+We also need to start a nc listener:
+
+sudo nc -lvnp port
+
+To activate the shell we can curl the place where its stored:
+
+curl http://overpass3/shell/phprev.php
+
+And we are in! 
+
+[![https://imgur.com/F2x8fh9.png](https://imgur.com/F2x8fh9.png)](https://imgur.com/F2x8fh9.png)
+
+## Privilege Escalation
+
+Lets find out what we can execute and how we can escalate our privileges.
+
+
+
+
 
 
 
