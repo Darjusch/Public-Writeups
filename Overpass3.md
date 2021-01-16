@@ -59,8 +59,11 @@ We can now loginto FTP!
 
 [![https://imgur.com/GZzNLB5.png](https://imgur.com/GZzNLB5.png)](https://imgur.com/GZzNLB5.png)
 
+After testing that we can upload files:
 
+[![https://imgur.com/1uxQlRt.png](https://imgur.com/1uxQlRt.png)](https://imgur.com/1uxQlRt.png)
 
+We can know upload a file with a reverseshell.
 
 
 
