@@ -80,10 +80,26 @@ And we are in!
 
 [![https://imgur.com/F2x8fh9.png](https://imgur.com/F2x8fh9.png)](https://imgur.com/F2x8fh9.png)
 
+## Persistence
+
+If we navigate to the /home directory we can see that there are two users:
+James and Paradox.
+For Paradox we know the password so lets switch to that user:
+
+[![https://imgur.com/4SCpOba.png](https://imgur.com/4SCpOba.png)](https://imgur.com/4SCpOba.png)
+
+In his homedirectory (~) we can see a .ssh folder so lets put our public key in authorizedkeys to get a better shell and persistance.
+
+[![https://imgur.com/Tgsi0S5.png](https://imgur.com/Tgsi0S5.png)](https://imgur.com/Tgsi0S5.png)
+
+Now we can use our private id_rsa key to loginto SSH:
+
+[![https://imgur.com/l7yN2dj.png](https://imgur.com/l7yN2dj.png)](https://imgur.com/l7yN2dj.png)
+
+
 ## Privilege Escalation
 
 Lets find out what we can execute and how we can escalate our privileges.
-
 
 
 
