@@ -119,20 +119,10 @@ Portforwarding is not as hard as i thought :D
 └─$ ssh paradox@overpass -i /home/darjusch/.ssh/id_rsa -L 2050:localhost:2050
 
 
-[![https://imgur.com/NwY6p02.png](https://imgur.com/NwY6p02.png)](https://imgur.com/NwY6p02.png)
+The box is to hard for us right now:
 
-[![https://imgur.com/QadWFuO.png](https://imgur.com/QadWFuO.png)](https://imgur.com/QadWFuO.png)
+this is a detailed write up.
+https://belikeparamjot.medium.com/overpass-3-hosting-writeup-6fcf1abe3ab1
 
-James sshkey
+We should research more about mounting and tunneling and then come back at a later point.
 
-[![https://imgur.com/aBzhZ62.png](https://imgur.com/aBzhZ62.png)](https://imgur.com/aBzhZ62.png)
-
-[![https://imgur.com/MK1dtEI.png](https://imgur.com/MK1dtEI.png)](https://imgur.com/MK1dtEI.png)
-
-Our own creation of a SUID binary rev shell :D 
-
-[![https://imgur.com/TrSo1Zl.png](https://imgur.com/TrSo1Zl.png)](https://imgur.com/TrSo1Zl.png)
-
-Trying this tutorial to get something out of it but it doesnt work ..
-
-https://www.hackingarticles.in/linux-privilege-escalation-using-path-variable/
