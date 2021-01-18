@@ -115,6 +115,10 @@ we found a option root_squash for nfs so we could try to ssh tunnel into that se
 
 [![https://imgur.com/364hbdt.png](https://imgur.com/364hbdt.png)](https://imgur.com/364hbdt.png)
 
+Portforwarding is not as hard as i thought :D 
+└─$ ssh paradox@overpass -i /home/darjusch/.ssh/id_rsa -L 2050:localhost:2050
+
+
 [![https://imgur.com/NwY6p02.png](https://imgur.com/NwY6p02.png)](https://imgur.com/NwY6p02.png)
 
 [![https://imgur.com/QadWFuO.png](https://imgur.com/QadWFuO.png)](https://imgur.com/QadWFuO.png)
