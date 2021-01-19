@@ -80,3 +80,7 @@ Okay this seems to be a dead end..
 Lets look for other ways to proceed!
 We found cap_setsuid ! 
 [![https://imgur.com/HEP67KP.png](https://imgur.com/HEP67KP.png)](https://imgur.com/HEP67KP.png)
+
+[![https://imgur.com/eWFs7uR.png](https://imgur.com/eWFs7uR.png)](https://imgur.com/eWFs7uR.png) CREDS TO: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md#capabilities
+
+[![https://imgur.com/zXzZZff.png](https://imgur.com/zXzZZff.png)](https://imgur.com/zXzZZff.png)
