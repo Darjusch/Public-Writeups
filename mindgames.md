@@ -62,5 +62,8 @@ searchsploit with the kernel version gives us this beauties to check:
 
 [![https://imgur.com/9wYBWI4.png](https://imgur.com/9wYBWI4.png)](https://imgur.com/9wYBWI4.png)
 
+Lets try them out:
 
+You can use searchsploit -m to download:
+searchsploit -m linux/local/47164.sh
 
