@@ -54,5 +54,13 @@ We find something interesting.
 
 [![https://imgur.com/fG0YCF6.png](https://imgur.com/fG0YCF6.png)](https://imgur.com/fG0YCF6.png)
 
+Check kernel version:
+
+[![https://imgur.com/e40xsCU.png](https://imgur.com/e40xsCU.png)](https://imgur.com/e40xsCU.png)
+
+searchsploit with the kernel version gives us this beauties to check:
+
+[![https://imgur.com/9wYBWI4.png](https://imgur.com/9wYBWI4.png)](https://imgur.com/9wYBWI4.png)
+
 
 
