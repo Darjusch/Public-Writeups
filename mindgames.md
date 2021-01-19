@@ -67,3 +67,10 @@ Lets try them out:
 You can use searchsploit -m to download:
 searchsploit -m linux/local/47164.sh
 
+i renamed it to kernel_exploit.sh and then got it on the target machine with over our http server.
+
+Typicall problems: forget permission and then wrong format..
+
+[![https://imgur.com/8sOrDJc.png](https://imgur.com/8sOrDJc.png)](https://imgur.com/8sOrDJc.png)
+
+
