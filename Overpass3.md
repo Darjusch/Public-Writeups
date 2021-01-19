@@ -126,3 +126,17 @@ https://belikeparamjot.medium.com/overpass-3-hosting-writeup-6fcf1abe3ab1
 
 We should research more about mounting and tunneling and then come back at a later point.
 
+okay i think i got it now:
+
+We are logged into ssh as paradox and we want to get access to the james user.
+We see that the folder of james is shared /home/james.
+So we can mount it as paradox and then access the content, right?
+No, :( because we ain't root.
+So we need a way to mount as root.. Where do we have root access? On our own machine! 
+So we find the port that the service is running on, normally we would do that with netstat but since its not available we run ss.
+We can see on which port nfs is running on lets say 2049.
+Now since we are logged into paradox with ssh we can PORTFORWARD.
+that means we can send our mount command from our host machine ( where we cant access the port 2049 of the target because its locally ) through the ssh port 22 where we have access to and then locally we can access again the port 2049 and since we have root privileges on our host we can mount the folder.
+
+So far the thought process, feels good to have it more or less figured out now we need to try it in praxis and also document the commands and see if it works or more questions come up.
+
