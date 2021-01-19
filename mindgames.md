@@ -73,4 +73,10 @@ Typicall problems: forget permission and then wrong format..
 
 [![https://imgur.com/8sOrDJc.png](https://imgur.com/8sOrDJc.png)](https://imgur.com/8sOrDJc.png)
 
+Okay this seems to be a dead end..
 
+[![https://imgur.com/ksaBlg1.png](https://imgur.com/ksaBlg1.png)](https://imgur.com/ksaBlg1.png)
+
+Lets look for other ways to proceed!
+We found cap_setsuid ! 
+[![https://imgur.com/HEP67KP.png](https://imgur.com/HEP67KP.png)](https://imgur.com/HEP67KP.png)
