@@ -84,3 +84,20 @@ We found cap_setsuid !
 [![https://imgur.com/eWFs7uR.png](https://imgur.com/eWFs7uR.png)](https://imgur.com/eWFs7uR.png) CREDS TO: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md#capabilities
 
 [![https://imgur.com/zXzZZff.png](https://imgur.com/zXzZZff.png)](https://imgur.com/zXzZZff.png)
+
+
+Here a short summary taken from the medium article full credits go to him (his name is: Z3R0 ): 
+
+The following part i had to research and i found this awsome medium article about Linux Capabilities and how to use openssl
+ with the capability set to ep to get root.
+
+AGAIN CREDIT TO: https://int0x33.medium.com/day-44-linux-capabilities-privilege-escalation-via-openssl-with-selinux-enabled-and-enforced-74d2bec02099
+
+Come here again when you fully understood it and give a good summary in own words.
+
+1. So far i understood that you can use openssl to create keys and certificates. -> So we can create a keys and certificates
+2. You can also start a server running with openssl. -> We can start a server with that keys and certificates
+3. Depending on where you are when you have the capability of ep set on openssl it will inherit the permission from the location. -> We start the server with openssl in the / directory.
+That means if you start the server from a low privileged userdirectory you will inherit that permission but if you create it in the / directory the server will inherit root permission.
+4. We can access this server with wget or curl from our normal user. -> We can do something like: curl -k "https://127.0.0.1:1337/etc/shadow"
+5. If we want to write instead of read we could create a new file in a folder decrypt it with openssl 
