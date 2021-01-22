@@ -123,3 +123,8 @@ The reason why need we need -k or --insecure
 [![https://imgur.com/7AorKEQ.png](https://imgur.com/7AorKEQ.png)](https://imgur.com/7AorKEQ.png)
 
 
+In case you get an error try following this solutions:
+
+[![https://imgur.com/wJONvdY.png](https://imgur.com/wJONvdY.png)](https://imgur.com/wJONvdY.png)
+
+It worked for me.
