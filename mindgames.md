@@ -128,3 +128,5 @@ In case you get an error try following this solutions:
 [![https://imgur.com/wJONvdY.png](https://imgur.com/wJONvdY.png)](https://imgur.com/wJONvdY.png)
 
 It worked for me.
+
+Nvm^ you need root privileges to overwrite..
