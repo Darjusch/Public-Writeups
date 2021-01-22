@@ -119,5 +119,7 @@ Now that the server is running we can curl the resource we want!
 
 curl -k "https://127.0.0.1:1337/etc/shadow" ( We could also just curl the root.txt :D )
 
+The reason why need we need -k or --insecure
+[![https://imgur.com/7AorKEQ.png](https://imgur.com/7AorKEQ.png)](https://imgur.com/7AorKEQ.png)
 
 
