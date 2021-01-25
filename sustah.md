@@ -38,5 +38,11 @@ https://portswigger.net/web-security/host-header/exploiting
 
 [![https://imgur.com/4dDk7Ec.png](https://imgur.com/4dDk7Ec.png)](https://imgur.com/4dDk7Ec.png)
 
+[![https://imgur.com/iNkmr2K.png](https://imgur.com/iNkmr2K.png)](https://imgur.com/iNkmr2K.png)
+
+[![https://imgur.com/9NrVN9h.png](https://imgur.com/9NrVN9h.png)](https://imgur.com/9NrVN9h.png)
+
+[![https://imgur.com/BZ4Iov1.png](https://imgur.com/BZ4Iov1.png)](https://imgur.com/BZ4Iov1.png)
+
 ## Privescalation
 
