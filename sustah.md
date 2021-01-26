@@ -46,3 +46,5 @@ https://portswigger.net/web-security/host-header/exploiting
 
 ## Privescalation
 
+
+
