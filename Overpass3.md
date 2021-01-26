@@ -159,9 +159,10 @@ Lets loginto his account with ssh.
 
 [![https://imgur.com/ZayPFoa.png](https://imgur.com/ZayPFoa.png)](https://imgur.com/ZayPFoa.png)
 
-Now we can upload a binary, give it SUID privileges from our HOST since we are root there.
+Now we can copy a binary, give it SUID privileges from our HOST since we are root there.
 
-[![https://imgur.com/islUKnK.png](https://imgur.com/islUKnK.png)](https://imgur.com/islUKnK.png)
+So we can cp /bin/bash .
+The shared directory as James.
 
 [![https://imgur.com/tpqioux.png](https://imgur.com/tpqioux.png)](https://imgur.com/tpqioux.png)
 
@@ -169,4 +170,15 @@ And then we can execute it with the flag -p so the set permission is not reset.
 
 [![https://imgur.com/gzXSQgw.png](https://imgur.com/gzXSQgw.png)](https://imgur.com/gzXSQgw.png)
 
+Give it root privilege.
+
+[![https://imgur.com/Jn8FPH7.png](https://imgur.com/Jn8FPH7.png)](https://imgur.com/Jn8FPH7.png)
+
+Execute it.
+
+[![https://imgur.com/wSQ3NVf.png](https://imgur.com/wSQ3NVf.png)](https://imgur.com/wSQ3NVf.png)
+
+We made it! 
+
+[![Celebration](https://media.giphy.com/media/3FQ1YRBV0TnTi6eG4g/giphy.gif)
 
