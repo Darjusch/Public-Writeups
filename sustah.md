@@ -125,5 +125,6 @@ So lets try to run rsync as user root since we dont need a password!
 
 <iframe src="https://giphy.com/embed/vmon3eAOp1WfK" width="480" height="357" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/celebration-excited-loki-vmon3eAOp1WfK">via GIPHY</a></p>
 
-![CELEBRATION]("https://media.giphy.com/media/vmon3eAOp1WfK/giphy.gif")
+![Celebration](https://media.giphy.com/media/vmon3eAOp1WfK/giphy.gif)
 
+![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
