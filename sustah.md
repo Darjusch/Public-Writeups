@@ -43,7 +43,13 @@ https://portswigger.net/web-security/host-header/exploiting
 
 By injecting the header in this way we can make the server belive the requests are coming from itself and therefor are trustworthy.
 
-[![https://imgur.com/kmPo0Wq.png](https://imgur.com/kmPo0Wq.png)](https://imgur.com/kmPo0Wq.png)
+[![https://imgur.com/UbV0Trm.png](https://imgur.com/UbV0Trm.png)](https://imgur.com/UbV0Trm.png)
+
+Now we can create our wordlist, we could use a onlinetool but we should try to write as much aspossible on our own :)
+
+[![https://imgur.com/TNqKfxz.png](https://imgur.com/TNqKfxz.png)](https://imgur.com/TNqKfxz.png)
+
+Now we can start our fuzzer tool:
 
 [![https://imgur.com/4dDk7Ec.png](https://imgur.com/4dDk7Ec.png)](https://imgur.com/4dDk7Ec.png)
 
