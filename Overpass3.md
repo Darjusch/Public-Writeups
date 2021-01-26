@@ -115,28 +115,48 @@ we found a option root_squash for nfs so we could try to ssh tunnel into that se
 
 [![https://imgur.com/364hbdt.png](https://imgur.com/364hbdt.png)](https://imgur.com/364hbdt.png)
 
-Portforwarding is not as hard as i thought :D 
-└─$ ssh paradox@overpass -i /home/darjusch/.ssh/id_rsa -L 2050:localhost:2050
-
-
-The box is to hard for us right now:
-
-this is a detailed write up.
-https://belikeparamjot.medium.com/overpass-3-hosting-writeup-6fcf1abe3ab1
-
-We should research more about mounting and tunneling and then come back at a later point.
-
-okay i think i got it now:
-
 We are logged into ssh as paradox and we want to get access to the james user.
+
+[![https://imgur.com/vjgiKIG.png](https://imgur.com/vjgiKIG.png)](https://imgur.com/vjgiKIG.png)
+
 We see that the folder of james is shared /home/james.
+
 So we can mount it as paradox and then access the content, right?
+
 No, :( because we ain't root.
+
 So we need a way to mount as root.. Where do we have root access? On our own machine! 
-So we find the port that the service is running on, normally we would do that with netstat but since its not available we run ss.
-We can see on which port nfs is running on lets say 2049.
-Now since we are logged into paradox with ssh we can PORTFORWARD.
+
+So we find the port that the service is running on, normally we would do that with netstat but since its not available we run rpcinfo.
+
+[![https://imgur.com/yQwrJH0.png](https://imgur.com/yQwrJH0.png)](https://imgur.com/yQwrJH0.png)
+
+We can see on which port nfs is running: 2049.
+
+Now since we have access to paradox with ssh we can PORTFORWARD.
+
+ssh paradox@10.10.185.59 -i paradox -L 2049:localhost:2049
+
+[![https://imgur.com/WJ5ae58.png](https://imgur.com/WJ5ae58.png)](https://imgur.com/WJ5ae58.png)
+
 that means we can send our mount command from our host machine ( where we cant access the port 2049 of the target because its locally ) through the ssh port 22 where we have access to and then locally we can access again the port 2049 and since we have root privileges on our host we can mount the folder.
 
-So far the thought process, feels good to have it more or less figured out now we need to try it in praxis and also document the commands and see if it works or more questions come up.
+[![https://imgur.com/zk99jhr.png](https://imgur.com/zk99jhr.png)](https://imgur.com/zk99jhr.png)
+
+We successfully mounted through an SSH-Tunnel :) 
+
+Lets see what we find in the share.
+
+A user flag! 
+
+[![https://imgur.com/jU8g4fA.png](https://imgur.com/jU8g4fA.png)](https://imgur.com/jU8g4fA.png)
+
+And ssh credentials from james !
+
+[![https://imgur.com/0uV8IsI.png](https://imgur.com/0uV8IsI.png)](https://imgur.com/0uV8IsI.png)
+
+Lets loginto his account with ssh.
+
+[![https://imgur.com/ZayPFoa.png](https://imgur.com/ZayPFoa.png)](https://imgur.com/ZayPFoa.png)
+
 
