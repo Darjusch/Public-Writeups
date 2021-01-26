@@ -127,4 +127,4 @@ So lets try to run rsync as user root since we dont need a password!
 
 ![Celebration](https://media.giphy.com/media/vmon3eAOp1WfK/giphy.gif)
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+Thank you for reading! 
