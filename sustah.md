@@ -26,15 +26,24 @@ So far we are pretty clueless.
 
 Lets take a closer look at the inputfield.
 
+We could try to bruteforce the right number with a method called fuzzing.
+For that we create a wordlist of a specific range of numbers and lets it try each of them:
+
+The tool we are going to use for that is called ffuf:
+
+https://github.com/ffuf/ffuf
+
 If we recall the description of the box:
 
 "The developers have added anti-cheat measures to their game. Are you able to defeat the restrictions to gain access to their internal CMS?"
+We probably also have to bypass a WAF.
 
 Lets look at header injection by portswiggger:
 https://portswigger.net/web-security/host-header/exploiting
 
-[![https://imgur.com/kmPo0Wq.png](https://imgur.com/kmPo0Wq.png)](https://imgur.com/kmPo0Wq.png)
+By injecting the header in this way we can make the server belive the requests are coming from itself and therefor are trustworthy.
 
+[![https://imgur.com/kmPo0Wq.png](https://imgur.com/kmPo0Wq.png)](https://imgur.com/kmPo0Wq.png)
 
 [![https://imgur.com/4dDk7Ec.png](https://imgur.com/4dDk7Ec.png)](https://imgur.com/4dDk7Ec.png)
 
