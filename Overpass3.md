@@ -182,3 +182,4 @@ We made it!
 
 [![Celebration](https://media.giphy.com/media/3FQ1YRBV0TnTi6eG4g/giphy.gif)
 
+Thank you for reading :) 
