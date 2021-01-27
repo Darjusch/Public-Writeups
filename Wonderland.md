@@ -107,6 +107,12 @@ We made it to hutter!
 
 [![https://imgur.com/UjpfCOj.png](https://imgur.com/UjpfCOj.png)](https://imgur.com/UjpfCOj.png)
 
+We found his password.
+
+[![https://imgur.com/t6uf2iB.png](https://imgur.com/t6uf2iB.png)](https://imgur.com/t6uf2iB.png)
+
+Lets ssh in and proceed! 
+
 At this point i will just run linpeas.
 Download it from here on your Host: 
 
@@ -150,3 +156,11 @@ Looks like we can run perl as hatter
 
 [![https://imgur.com/k8pJYiL.png](https://imgur.com/k8pJYiL.png)](https://imgur.com/k8pJYiL.png)
 
+We can use the information we collected and execute the privilege escalation from GTFOBINS to get root.
+
+[![https://imgur.com/FF1InnC.png](https://imgur.com/FF1InnC.png)](https://imgur.com/FF1InnC.png)
+
+
+[![](https://media.giphy.com/media/RhiMxsXuFy9KU/giphy.gif)
+
+Thank you for reading :) 
