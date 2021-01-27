@@ -48,6 +48,8 @@ After logging in with SSH we can see the root.txt and a python script both owned
 
 [![https://imgur.com/0Q8Eaqt.png](https://imgur.com/0Q8Eaqt.png)](https://imgur.com/0Q8Eaqt.png)
 
+Since the root flag is in our home directory and the hint says everything is upside down i checked the /root directory and found the user flag.
+
 We can see the other users on the machine:
 
 [![https://imgur.com/i40U4qz.png](https://imgur.com/i40U4qz.png)](https://imgur.com/i40U4qz.png)
@@ -66,7 +68,20 @@ for i in range(10):
     line = random.choice(poem.split("\n"))
     print("The line was:\t", line)
 
-I dont see how we can abuse this yet lets look further.
+Since there is no absolute path we can create our own random.py and it will be imported and executed here:
+
+So create a file called random.py and paste the code for a python reverseshell inside.
+
+https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#python
+
+// Make sure to remove the python -c ' ' 
+
+sudo -u rabbit /usr/bin/python3.6 walrus_and_the_carpenter.py
+
+[![https://imgur.com/21Wo62w.png](https://imgur.com/21Wo62w.png)](https://imgur.com/21Wo62w.png)
+
+And we are the rabbit ! :) 
+
 At this point i will just run linpeas.
 Download it from here on your Host: 
 
@@ -85,8 +100,28 @@ There is a interisting capability set on perl:
 
 [![https://imgur.com/68H4nts.png](https://imgur.com/68H4nts.png)](https://imgur.com/68H4nts.png)
 
+Alternativly we could have also found it like this:
+
+[![https://imgur.com/khkwlxr.png](https://imgur.com/khkwlxr.png)](https://imgur.com/khkwlxr.png)
+
 When we check on GTFOBins on perl capabilities:
 
 [![https://imgur.com/L8aSgEu.png](https://imgur.com/L8aSgEu.png)](https://imgur.com/L8aSgEu.png)
 
+I tried this didn't work.
+we don't have permission to use perl. 
+
+Lets find a way to bypass that!
+
+When we look at the manpage of capabilities.
+
+https://man7.org/linux/man-pages/man7/capabilities.7.html
+
+We can see that we can use it to change the suid.
+
+[![https://imgur.com/HdwcoFW.png](https://imgur.com/HdwcoFW.png)](https://imgur.com/HdwcoFW.png)
+
+Looks like we can run perl as hatter
+
+[![https://imgur.com/k8pJYiL.png](https://imgur.com/k8pJYiL.png)](https://imgur.com/k8pJYiL.png)
 
