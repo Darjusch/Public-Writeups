@@ -97,9 +97,12 @@ When we cat it, we can see a lot of unreadable stuff but some lines are showing.
 
 [![https://imgur.com/6BzJE3a.png](https://imgur.com/6BzJE3a.png)](https://imgur.com/6BzJE3a.png)
 
+
 So the script uses date.
 
 Lets repeat the process we had before with a bashscript to escalate.
+
+[![https://imgur.com/3t3QSJj.png](https://imgur.com/3t3QSJj.png)](https://imgur.com/3t3QSJj.png)
 
 [![https://imgur.com/uUxT0tg.png](https://imgur.com/uUxT0tg.png)](https://imgur.com/uUxT0tg.png)
 
