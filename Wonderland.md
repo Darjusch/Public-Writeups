@@ -82,6 +82,31 @@ sudo -u rabbit /usr/bin/python3.6 walrus_and_the_carpenter.py
 
 And we are the rabbit ! :) 
 
+In the homedirectory i created a pair of ssh keys:
+
+mkdir .ssh
+cd .ssh
+touch authorized_keys
+ssh-keygen
+cat id_rsa.pub > authorized_keys
+
+and then copied the id_rsa key to my hostmachine to loginto rabbit with that.
+
+In the home directory of rabbit we have a TeaParty file.
+When we cat it, we can see a lot of unreadable stuff but some lines are showing.
+
+[![https://imgur.com/6BzJE3a.png](https://imgur.com/6BzJE3a.png)](https://imgur.com/6BzJE3a.png)
+
+So the script uses date.
+
+Lets repeat the process we had before with a bashscript to escalate.
+
+[![https://imgur.com/uUxT0tg.png](https://imgur.com/uUxT0tg.png)](https://imgur.com/uUxT0tg.png)
+
+We made it to hutter! 
+
+[![https://imgur.com/UjpfCOj.png](https://imgur.com/UjpfCOj.png)](https://imgur.com/UjpfCOj.png)
+
 At this point i will just run linpeas.
 Download it from here on your Host: 
 
