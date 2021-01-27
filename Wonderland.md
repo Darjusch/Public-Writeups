@@ -100,11 +100,17 @@ When we cat it, we can see a lot of unreadable stuff but some lines are showing.
 
 So the script uses date.
 
-Lets repeat the process we had before with a bashscript to escalate.
+We can do something similair than before.
+
+We create our own date:
+
+[![https://imgur.com/uUxT0tg.png](https://imgur.com/uUxT0tg.png)](https://imgur.com/uUxT0tg.png)
+
+This time we maniupulate our own path so that the next time we execute a bashscript it looks for it in our home directory, also we need to make it executable:
 
 [![https://imgur.com/3t3QSJj.png](https://imgur.com/3t3QSJj.png)](https://imgur.com/3t3QSJj.png)
 
-[![https://imgur.com/uUxT0tg.png](https://imgur.com/uUxT0tg.png)](https://imgur.com/uUxT0tg.png)
+Now we execute it.
 
 We made it to hutter! 
 
